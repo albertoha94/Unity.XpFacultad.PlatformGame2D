@@ -4,9 +4,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [Header("Movement")]
+    [SerializeField] float boxColliderVerticalTolerance = 0.1f;
     [SerializeField] float movementSpeed = 7f;
     [SerializeField] float jumpForce = 7f;
-    [SerializeField] LayerMask jumpableGround;
+    [SerializeField] LayerMask groundLayerMask;
 
     Rigidbody2D rigidbody2D;
     Animator animator;
@@ -21,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+        var raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, boxColliderVerticalTolerance, groundLayerMask);
+        return raycastHit.collider != null;
     }
 
     // Start is called before the first frame update
@@ -34,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         float dirX = Input.GetAxis("Horizontal");
@@ -42,13 +45,26 @@ public class PlayerMovement : MonoBehaviour
 
         rigidbody2D.velocity = new Vector2(dirX * movementSpeed, rigidbody2D.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        var isGrounded = IsGrounded();
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             soundJump.Play();
             rigidbody2D.velocity = new Vector3(0, jumpForce, 0);
         }
 
         UpdateMovementAnimation(dirX);
+
+        #region Debug Code
+        Color rayColor;
+        if (isGrounded) rayColor = Color.yellow; else rayColor = Color.red;
+
+        var boxColliderCenter = boxCollider.bounds.center;
+        var boxColliderExtents = boxCollider.bounds.extents;
+        Debug.DrawRay(boxColliderCenter + new Vector3(boxColliderExtents.x, 0), Vector3.down * (boxColliderExtents.y + boxColliderVerticalTolerance), rayColor);
+        Debug.DrawRay(boxColliderCenter - new Vector3(boxColliderExtents.x, 0), Vector3.down * (boxColliderExtents.y + boxColliderVerticalTolerance), rayColor);
+        Debug.DrawRay(boxColliderCenter - new Vector3(boxColliderExtents.x, boxColliderExtents.y + boxColliderVerticalTolerance), Vector2.right * boxCollider.size.x, rayColor);
+
+        #endregion
     }
 
     private void UpdateMovementAnimation(float dirX)
