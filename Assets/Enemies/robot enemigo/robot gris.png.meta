@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 3f2088ce66933e147ae58381b6870f3c
+guid: 0b6e39fc81cc5d4428a2e2187fa17a6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1832798782386215428
-    second: idle_01
+      213: -4345252935224176966
+    second: robot gris_0
   - first:
-      213: -804565797002936511
-    second: idle_02
+      213: -120365660832578190
+    second: robot gris_1
   - first:
-      213: -1810037515878956104
-    second: walk_01
+      213: -6200615707919283200
+    second: robot gris_2
   - first:
-      213: -7717115415944096589
-    second: walk_02
+      213: 8849357788396101356
+    second: robot gris_3
   - first:
-      213: -1318340269845670475
-    second: walk_03
+      213: 3852353356226593701
+    second: robot gris_4
   - first:
-      213: 3583672483280409479
-    second: walk_04
+      213: -3183946517230922901
+    second: robot gris_5
   - first:
-      213: 8542858063043373584
-    second: attack_01
+      213: 1140835946697971503
+    second: robot gris_6
   - first:
-      213: -8055192065254794944
-    second: attack_02
+      213: 6518915427635027845
+    second: robot gris_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,169 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_01
+      name: robot gris_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 1457
-        width: 425
-        height: 712
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40a16e038c86f6910800000000000000
-      internalID: 1832798782386215428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_02
-      rect:
-        serializedVersion: 2
-        x: 536
-        y: 1457
-        width: 431
-        height: 712
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14ff53f9bab95d4f0800000000000000
-      internalID: -804565797002936511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_01
-      rect:
-        serializedVersion: 2
-        x: 1043
-        y: 1448
-        width: 518
-        height: 701
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b387e3287471e6e0800000000000000
-      internalID: -1810037515878956104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_02
-      rect:
-        serializedVersion: 2
-        x: 1662
-        y: 1448
-        width: 402
-        height: 682
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b416fd8a6c47e490800000000000000
-      internalID: -7717115415944096589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_03
-      rect:
-        serializedVersion: 2
-        x: 2159
-        y: 1448
-        width: 573
-        height: 695
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b591ca628054bde0800000000000000
-      internalID: -1318340269845670475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_04
-      rect:
-        serializedVersion: 2
-        x: 2826
-        y: 1448
-        width: 360
-        height: 704
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 783554de223cbb130800000000000000
-      internalID: 3583672483280409479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_01
-      rect:
-        serializedVersion: 2
-        x: 261
-        y: 0
-        width: 969
-        height: 694
+        x: 0
+        y: 63
+        width: 31
+        height: 50
       alignment: 9
-      pivot: {x: 0.7004148, y: 0.5000001}
+      pivot: {x: 0.4912617, y: 0.032}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01a284675245e8670800000000000000
-      internalID: 8542858063043373584
+      spriteID: abe4db04a7f82b3c0800000000000000
+      internalID: -4345252935224176966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_02
+      name: robot gris_1
       rect:
         serializedVersion: 2
-        x: 1437
-        y: 0
-        width: 1087
-        height: 1357
+        x: 42
+        y: 63
+        width: 42
+        height: 48
       alignment: 9
-      pivot: {x: 0.49999976, y: 0.25566366}
+      pivot: {x: 0.5, y: 0.032}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04951f0be75363090800000000000000
-      internalID: -8055192065254794944
+      spriteID: 2754be6b110645ef0800000000000000
+      internalID: -120365660832578190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 63
+        width: 39
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: 0.032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c83ccaddcf2f9a0800000000000000
+      internalID: -6200615707919283200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 37
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee9fabc50c3fca70800000000000000
+      internalID: 8849357788396101356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 63
+        width: 36
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5, y: 0.032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a38b2387fe467530800000000000000
+      internalID: 3852353356226593701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 29
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63db98038950d3d0800000000000000
+      internalID: -3183946517230922901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 34
+        height: 51
+      alignment: 9
+      pivot: {x: 0.42, y: 0.0123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27dde5cf3015df00800000000000000
+      internalID: 1140835946697971503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robot gris_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 34
+        height: 51
+      alignment: 9
+      pivot: {x: 0.42, y: 0.0123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fdff0fa07d77a50800000000000000
+      internalID: 6518915427635027845
       vertices: []
       indices: 
       edges: []
