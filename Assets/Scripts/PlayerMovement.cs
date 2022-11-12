@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float boxColliderVerticalTolerance = 0.1f;
     [SerializeField] float movementSpeed = 7f;
-    [SerializeField] float jumpForce = 7f;
+    [SerializeField] float jumpForce = 8f;
+    [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] LayerMask groundLayerMask;
 
     Rigidbody2D rigidbody2D;
@@ -49,7 +50,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             soundJump.Play();
-            rigidbody2D.velocity = new Vector3(0, jumpForce, 0);
+            rigidbody2D.velocity += Vector2.up * (jumpForce - 1);
+        }
+
+        if (rigidbody2D.velocity.y < 0.1f && !isGrounded)
+        {
+            rigidbody2D.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime;
         }
 
         UpdateMovementAnimation(dirX);
