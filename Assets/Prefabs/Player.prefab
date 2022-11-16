@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 5671703896416235546}
   - component: {fileID: 5671703896416235544}
   - component: {fileID: 3081995620424467252}
+  - component: {fileID: 3893612196178612297}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -422,6 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13646e2e696b0044580583f5abd461b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canFlipX: 1
+  canMoveHorizontally: 1
   boxColliderVerticalTolerance: 0.1
   movementSpeed: 6
   jumpForce: 9
@@ -456,6 +459,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d55e819fa73c14690eb4012e00b2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3893612196178612297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671703896416235551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e44fd10f267a64f86498037dcac3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopGroundSpeed: 1
+  stopAirSpeed: 0
+  attackRatePerSecond: 0.5
 --- !u!1 &6538738349291313604
 GameObject:
   m_ObjectHideFlags: 0
