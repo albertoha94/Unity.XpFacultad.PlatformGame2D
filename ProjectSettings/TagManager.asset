@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Collectable
   - DeathTrap
+  - Enemy
+  - PlayerDamageHitbox
   layers:
   - Default
   - TransparentFX

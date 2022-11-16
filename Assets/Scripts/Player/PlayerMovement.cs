@@ -127,5 +127,10 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
             canMoveHorizontally = true;
             canFlipX = true;
         }
+
+        void TestFunction(bool x)
+        {
+
+        }
     }
 }

@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using XpFacultad.JuegoPlataformasUnity2D.Common;
 
 public class PlayerLifeComponent : MonoBehaviour
 {
@@ -19,7 +17,15 @@ public class PlayerLifeComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("DeathTrap"))
+        if (collision.gameObject.CompareTag(Tags.DEATHTRAP))
+        {
+            OnDie();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(Tags.ENEMY))
         {
             OnDie();
         }

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using XpFacultad.JuegoPlataformasUnity2D.Enemy;
 using XpFacultad.JuegoPlataformasUnity2D.Player;
 
 namespace XpFacultad.JuegoPlataformasUnity2D.Player
@@ -7,7 +9,9 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
     {
 
         [Header("Attack Speed")]
+        [SerializeField] int baseDamage = 1;
         [SerializeField] float attackRatePerSecond = 0.5f;
+        [SerializeField] PolygonCollider2D[] combatHitboxes;
         float nextAttackTime = 0f;
 
         Animator animator;
@@ -35,6 +39,26 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
             else
             {
                 nextAttackTime += deltatime;
+            }
+        }
+
+        public void DoDamage(EnemyHealth enemyHealth)
+        {
+            enemyHealth.TakeDamage(baseDamage);
+        }
+
+        private void SetCombatHitbox(int index)
+        {
+            for (int i = 0; i < combatHitboxes.Length; i++)
+            {
+                if (i == index)
+                {
+                    combatHitboxes[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    combatHitboxes[i].gameObject.SetActive(false);
+                }
             }
         }
 
