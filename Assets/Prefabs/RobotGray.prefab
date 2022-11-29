@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6083178792856640772}
   - component: {fileID: 1719073238157742415}
   - component: {fileID: 1504357919562852703}
+  - component: {fileID: 2234249076201995543}
   - component: {fileID: 8916091386425203236}
   m_Layer: 0
   m_Name: Robot
@@ -148,6 +149,19 @@ MonoBehaviour:
   destructionTransform: {fileID: 5517888024366807397}
   objectToDestroyOnDeath: {fileID: 6107805505670447107}
   health: 1
+--- !u!114 &2234249076201995543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3850700596415235872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061490c1cb81610458f64768b24a4475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementState: 0
 --- !u!114 &8916091386425203236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +178,54 @@ MonoBehaviour:
   - {fileID: 6729439625443425031}
   - {fileID: 8935216908483385780}
   speed: 2
+  distanceThreshold: 0.1
+  waitTimeBetweenPoints: 2
+  isMovingRight: 1
+  onMovementStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2234249076201995543}
+        m_TargetAssemblyTypeName: EnemyAnimator, Assembly-CSharp
+        m_MethodName: SetToIdle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMovementStartLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2234249076201995543}
+        m_TargetAssemblyTypeName: EnemyAnimator, Assembly-CSharp
+        m_MethodName: SetToRunningLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMovementStartRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2234249076201995543}
+        m_TargetAssemblyTypeName: EnemyAnimator, Assembly-CSharp
+        m_MethodName: SetToRunningRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4819049255644671802
 GameObject:
   m_ObjectHideFlags: 0
