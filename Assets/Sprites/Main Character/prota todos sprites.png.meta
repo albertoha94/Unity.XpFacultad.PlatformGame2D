@@ -4,36 +4,36 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2211434483597472795
-    second: prota todos sprites_0
+    second: idle_0
   - first:
       213: -5100221084377977378
-    second: prota todos sprites_1
+    second: idle_1
   - first:
       213: -5392466779363469743
-    second: prota todos sprites_2
+    second: run_0
   - first:
       213: 338683536074862300
-    second: prota todos sprites_3
+    second: run_1
   - first:
       213: 6615263750495064695
-    second: prota todos sprites_4
+    second: run_2
   - first:
       213: -3824143030661790682
-    second: prota todos sprites_5
+    second: run_3
   - first:
       213: -7585524581252776442
-    second: prota todos sprites_6
+    second: jump_0
   - first:
       213: -260407905959963386
-    second: prota todos sprites_7
+    second: fall_0
   - first:
       213: -4902271423424076864
-    second: prota todos sprites_8
+    second: attack_0
   - first:
       213: -5638674463282741542
-    second: prota todos sprites_10
+    second: attack_1
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -92,6 +92,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -121,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: prota todos sprites_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,13 +143,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_1
+      name: idle_1
       rect:
         serializedVersion: 2
         x: 31
         y: 68
         width: 19
-        height: 32
+        height: 33
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_2
+      name: run_0
       rect:
         serializedVersion: 2
         x: 62
@@ -184,13 +185,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_3
+      name: run_1
       rect:
         serializedVersion: 2
         x: 98
         y: 68
         width: 16
-        height: 32
+        height: 33
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,7 +206,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_4
+      name: run_2
       rect:
         serializedVersion: 2
         x: 126
@@ -226,13 +227,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_5
+      name: run_3
       rect:
         serializedVersion: 2
         x: 162
         y: 68
         width: 16
-        height: 32
+        height: 33
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,7 +248,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_6
+      name: jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -268,7 +269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_7
+      name: fall_0
       rect:
         serializedVersion: 2
         x: 37
@@ -289,7 +290,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_8
+      name: attack_0
       rect:
         serializedVersion: 2
         x: 71
@@ -297,7 +298,7 @@ TextureImporter:
         width: 43
         height: 33
       alignment: 9
-      pivot: {x: 0.7342166, y: 0.5}
+      pivot: {x: 0.7, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,7 +311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: prota todos sprites_10
+      name: attack_1
       rect:
         serializedVersion: 2
         x: 126
@@ -318,7 +319,7 @@ TextureImporter:
         width: 48
         height: 59
       alignment: 9
-      pivot: {x: 0.5383895, y: 0.27753654}
+      pivot: {x: 0.5, y: 0.28}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

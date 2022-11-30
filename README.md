@@ -2,6 +2,9 @@
 
 Tutoriales trabajados:
 
+Base Platformger:
+https://youtu.be/Ii-scMenaOQ
+
 Ground check:
 https://youtu.be/c3iEl5AwUF8
 

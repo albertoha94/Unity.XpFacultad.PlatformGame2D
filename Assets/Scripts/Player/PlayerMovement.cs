@@ -46,8 +46,8 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
                 canMoveHorizontally ? dirX * movementSpeed : 0f,
                 rigidbody2D.velocity.y
                 );
-            Debug.Log("Velocity X:" + rigidbody2D.velocity.x);
-            Debug.Log("Velocity Y:" + rigidbody2D.velocity.y);
+            // Debug.Log("Velocity X:" + rigidbody2D.velocity.x);
+            // Debug.Log("Velocity Y:" + rigidbody2D.velocity.y);
 
             var isGrounded = IsGrounded();
             if (Input.GetButtonDown("Jump") && isGrounded)
