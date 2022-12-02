@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using XpFacultad.JuegoPlataformasUnity2D.Enemy;
-using XpFacultad.JuegoPlataformasUnity2D.Player;
 
 namespace XpFacultad.JuegoPlataformasUnity2D.Player
 {
@@ -12,16 +11,21 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
         [SerializeField] int baseDamage = 1;
         [SerializeField] float attackRatePerSecond = 0.5f;
         [SerializeField] PolygonCollider2D[] combatHitboxes;
+        public bool canAttack = true;
         float nextAttackTime = 0f;
 
         Animator animator;
-        PlayerMovement playerMovement;
+
+        public bool CanAttack
+        {
+            get { return canAttack; }
+            set { canAttack = value; }
+        }
 
         // Start is called before the first frame update
         void Awake()
         {
             animator = GetComponent<Animator>();
-            playerMovement = GetComponent<PlayerMovement>();
         }
 
         // Update is called once per frame
@@ -64,7 +68,10 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Player
 
         private void PerformAttackBase()
         {
-            animator.SetTrigger(PlayerParameters.ATTACK);
+            if (canAttack)
+            {
+                animator.SetTrigger(PlayerParameters.ATTACK);
+            }
         }
     }
 }

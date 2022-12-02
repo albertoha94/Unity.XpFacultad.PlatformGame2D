@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using XpFacultad.JuegoPlataformasUnity2D.Mechanics;
 
 public class PlayerItemCollectorComponent : MonoBehaviour
 {
@@ -14,12 +13,18 @@ public class PlayerItemCollectorComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Collectable"))
+
+        var go = collision.gameObject;
+        if (go.CompareTag("Collectable"))
         {
-            Destroy(collision.gameObject);
+            soundScore.Play();
             cherries++;
             cherriesText.text= "Cherries:" + cherries;
-            soundScore.Play();
+            if (go.TryGetComponent(out MechCollectable mechCollectable))
+            {
+                mechCollectable.Collect();
+            }
+            Destroy(go);
         }
     }
 }

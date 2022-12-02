@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -87,5 +88,14 @@ public class MechWaypointFollower : MonoBehaviour
                 canMoveTimer += deltaTime;
             }
         }
+    }
+
+    public void StopForSeconds(float seconds) => StartCoroutine(StopForSecond(seconds));
+
+    private IEnumerator StopForSecond(float seconds)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(seconds);
+        canMove = true;
     }
 }

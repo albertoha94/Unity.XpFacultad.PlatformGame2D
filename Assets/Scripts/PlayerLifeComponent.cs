@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using XpFacultad.JuegoPlataformasUnity2D.Common;
 
 public class PlayerLifeComponent : MonoBehaviour
 {
+
+    [Header("Events")]
+    [SerializeField] private UnityEvent onDie;
 
     Animator animator;
     Rigidbody2D rigidbody2D;
@@ -33,6 +37,7 @@ public class PlayerLifeComponent : MonoBehaviour
 
     private void OnDie()
     {
+        onDie.Invoke();
         rigidbody2D.bodyType = RigidbodyType2D.Static;
         animator.SetTrigger("death");
     }

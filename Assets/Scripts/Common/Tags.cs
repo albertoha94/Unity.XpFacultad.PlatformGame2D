@@ -5,5 +5,6 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Common
         public static string DEATHTRAP = "DeathTrap";
         public static string ENEMY = "Enemy";
         public static string PLAYER_DAMAGE_HITBOX = "PlayerDamageHitbox";
+        public static string PLAYER = "Player";
     }
 }

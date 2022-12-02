@@ -145,10 +145,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e92523dd30e84c40b56d1d0f880f249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageFX: {fileID: 7771731351774840439, guid: 1342922aa796bc94db2d88ad4afa115d, type: 3}
   destructionFX: {fileID: 7771731351774840439, guid: 4cb3f38195bcd6f41ab91302fb12096e, type: 3}
   destructionTransform: {fileID: 5517888024366807397}
   objectToDestroyOnDeath: {fileID: 6107805505670447107}
-  health: 1
+  health: 3
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8916091386425203236}
+        m_TargetAssemblyTypeName: MechWaypointFollower, Assembly-CSharp
+        m_MethodName: StopForSeconds
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2234249076201995543
 MonoBehaviour:
   m_ObjectHideFlags: 0
