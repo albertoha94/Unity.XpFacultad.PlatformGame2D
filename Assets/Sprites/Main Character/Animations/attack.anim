@@ -105,16 +105,16 @@ AnimationClip:
     intParameter: 1
     messageOptions: 0
   - time: 0.75
-    functionName: EnableMovementAfterAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.75
     functionName: SetCombatHitbox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: -1
+    messageOptions: 0
+  - time: 0.75
+    functionName: EnableMovementAfterAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0

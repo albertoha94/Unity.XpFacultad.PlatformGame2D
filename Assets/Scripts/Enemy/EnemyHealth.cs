@@ -22,7 +22,7 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Enemy
         {
             if (collision.gameObject.CompareTag(Tags.PLAYER_DAMAGE_HITBOX))
             {
-                if (collision.gameObject.TryGetComponent(out PlayerCombatHitbox playerCombatHitbox))
+                if (collision.gameObject.TryGetComponent(out PlayerHitbox playerCombatHitbox))
                 {
                     TakeDamage(playerCombatHitbox.baseDamage);
                 }
