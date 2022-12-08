@@ -797,8 +797,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3296679224331495359}
+  - component: {fileID: 795715122454322106}
   - component: {fileID: 6165584334024964833}
-  - component: {fileID: 1670718717100184596}
   m_Layer: 0
   m_Name: Hitboxes
   m_TagString: Untagged
@@ -822,23 +822,7 @@ Transform:
   m_Father: {fileID: 5671703896416235550}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6165584334024964833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6538738349291313604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e44fd10f267a64f86498037dcac3f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2959702859931621273}
-  combatHitboxes:
-  - {fileID: 6455387177189098751}
-  - {fileID: 1627887656942703392}
---- !u!50 &1670718717100184596
+--- !u!50 &795715122454322106
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -858,7 +842,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &6165584334024964833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538738349291313604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12e44fd10f267a64f86498037dcac3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 2959702859931621273}
+  combatHitboxes:
+  - {fileID: 6455387177189098751}
+  - {fileID: 1627887656942703392}
 --- !u!1 &6738064130946191376
 GameObject:
   m_ObjectHideFlags: 0
