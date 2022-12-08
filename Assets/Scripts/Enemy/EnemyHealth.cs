@@ -13,16 +13,37 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Enemy
         [SerializeField] GameObject destructionFX;
         [SerializeField] Transform destructionTransform;
         [SerializeField] GameObject objectToDestroyOnDeath;
+        [SerializeField] float canTakeDamageTimeThreshold = 0.5f;
         [SerializeField] int health = 1;
+
+        float nextTakeDamageTime = 0f;
+        bool canTakeDamage = true;
 
         [Header("Events")]
         [SerializeField] private UnityEvent onDamageTaken;
+
+        void Update()
+        {
+            if (!canTakeDamage)
+            {
+                var deltatime = Time.deltaTime;
+                if (nextTakeDamageTime >= canTakeDamageTimeThreshold)
+                {
+                    nextTakeDamageTime = 0f;
+                    canTakeDamage = true;
+                }
+                else
+                {
+                    nextTakeDamageTime += deltatime;
+                }
+            }
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag(Tags.PLAYER_DAMAGE_HITBOX))
             {
-                if (collision.gameObject.TryGetComponent(out PlayerHitbox playerCombatHitbox))
+                if (collision.gameObject.TryGetComponent(out PlayerHitbox playerCombatHitbox) && canTakeDamage)
                 {
                     TakeDamage(playerCombatHitbox.baseDamage);
                 }
@@ -38,6 +59,7 @@ namespace XpFacultad.JuegoPlataformasUnity2D.Enemy
             }
             else
             {
+                canTakeDamage = false;
                 onDamageTaken.Invoke();
                 Instantiate(damageFX, destructionTransform.position, destructionTransform.rotation);
             }
