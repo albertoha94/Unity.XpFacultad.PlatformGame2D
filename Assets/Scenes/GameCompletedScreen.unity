@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 272}
-  m_SizeDelta: {x: 960, y: 467.5708}
+  m_AnchoredPosition: {x: 0, y: 117.04675}
+  m_SizeDelta: {x: 960, y: 157.6643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278011951
 MonoBehaviour:
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Completed!
+  m_text: Thank you for playing!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25eabd07f23407a45990cd1b14e88e0f, type: 2}
   m_sharedMaterial: {fileID: -448624572191165648, guid: 25eabd07f23407a45990cd1b14e88e0f, type: 2}
