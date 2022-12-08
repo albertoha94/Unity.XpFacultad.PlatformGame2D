@@ -32,15 +32,18 @@ public class PlayerCombat : MonoBehaviour
         var deltatime = Time.deltaTime;
         if (nextAttackTime >= attackRatePerSecond)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                PerformAttackBase();
-                nextAttackTime = 0f;
-            }
+            canAttack = true;
         }
         else
         {
             nextAttackTime += deltatime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z) && canAttack)
+        {
+            PerformAttackBase();
+            nextAttackTime = 0f;
+            canAttack = false;
         }
     }
 
